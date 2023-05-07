@@ -1,0 +1,7 @@
+---
+ - name: Test Playbook
+   hosts: pbook
+   tasks:
+    - name: copy module
+      copy: src=/var/log/messages dest=/tmp/
+...       
