@@ -1,0 +1,6 @@
+---
+ - name: create a directory by using ansible
+   hosts: all
+   tasks:
+    - shell: mkdir -p /tmp/dir1/dir2
+...
