@@ -1,0 +1,8 @@
+---
+   - name: "create a file and copy the file from /var and create short link"
+     hosts: babi
+     tasks:
+      - file: dest=/tmp/oyo state=touch
+      - copy: src=/tmp/oyo  dest=/var
+      - file: src=/var/oyo dest=/var/loyo state=link
+...
