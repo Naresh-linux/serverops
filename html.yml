@@ -1,0 +1,10 @@
+---
+ - name: naresh reddy
+   hosts: pbook
+   tasks:
+     - name: add a line in index.html
+       lineinfile: dest=/var/www/html/index.html line='vara-sys-naresh'
+
+     - name: service restart
+       service: name=httpd state=started
+...
