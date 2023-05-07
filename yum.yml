@@ -1,0 +1,26 @@
+---
+ - name: httpd install
+   hosts: all
+   tasks:
+   -  yum:
+       name: httpd
+       state: present
+   - yum:
+       name: vsftpd
+       state: present
+   - yum:
+       name: ftp
+       state: present
+   - yum:
+       name: finger
+       state: present
+   - yum:
+       name: samba
+       state: present
+   - service:
+       name: httpd
+       state: restarted
+   - service:
+       name: vsftpd
+       state: restarted
+
