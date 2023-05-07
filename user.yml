@@ -1,0 +1,11 @@
+---
+ - name: adding users
+   hosts: all
+   tasks:
+      - user: name="{{item}}" state=present group=csk23
+        with_items:
+            - anush
+            - suresh
+      - shell: usermod -u 1001 anush
+      - shell: usermod -u 1002 suresh
+...
