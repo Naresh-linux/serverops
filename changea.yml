@@ -1,0 +1,6 @@
+---
+ - name: create a directory by using ansible
+   hosts: all
+   tasks:
+    - file: dest=/tmp/dir5 state=directory owner=naresh group=bat25a
+...
