@@ -1,0 +1,11 @@
+---
+ - name: create a multiple files at a time
+   hosts: all
+   tasks:
+    - user: name="{{item}}" state=present
+      with_item:
+          - file1
+          - file2
+          - file3
+          - file4
+...
